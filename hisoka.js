@@ -1396,7 +1396,7 @@ case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stike
             bawah = text.split('|')[1] ? text.split('|')[1] : '-'
 	        let dwnld = await quoted.download()
 	        let { floNime } = require('./lib/uploader')
-	        let fatGans = await floNime(dwnld)
+	        let anu = await floNime(dwnld)
 	        let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas ? atas : '')}/${encodeURIComponent(bawah ? bawah : '')}.png?background=${anu.url}`
 	        let FaTiH = await hisoka.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
 	        await fs.unlinkSync(FaTiH)
