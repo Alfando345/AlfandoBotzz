@@ -765,18 +765,8 @@ case 'cekmati':
             }
             break
             case 'jodohku': {
-            if (!m.isGroup) throw mess.group
-            let member = participants.map(u => u.id)
-            let me = m.sender
-            let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `👫Jodoh mu adalah
-
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
-            let ments = [me, jodoh]
-            let buttons = [
-                        { buttonId: 'jodohku', buttonText: { displayText: 'JODOHKU' }, type: 1 }
-                    ]
-                    await hisoka.sendButtonText(m.chat, buttons, jawab, 'ShizukaBotz', m, {mentions: ments})
+             if (!m.isGroup) throw mess.group
+            m.reply('Fitur Telah di Matikan oleh Admin Bot;!\n\nKarena Sering disalahgunakan untuk spam group🙏🙏')
             }
             break
             case 'lgbtku': {
@@ -796,17 +786,7 @@ case 'cekmati':
             break
             case 'jadian': {
             if (!m.isGroup) throw mess.group
-            let member = participants.map(u => u.id)
-            let orang = member[Math.floor(Math.random() * member.length)]
-            let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `Ciee yang Jadian💖 Jangan lupa pajak jadiannya🐤
-
-@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
-            let menst = [orang, jodoh]
-            let buttons = [
-                        { buttonId: 'jadian', buttonText: { displayText: 'JADIAN' }, type: 1 }
-                    ]
-                    await hisoka.sendButtonText(m.chat, buttons, jawab, 'ShizukaBotz', m, {mentions: menst})
+            m.reply('Fitur Telah di Matikan oleh Admin Bot;!\n\nKarena Sering disalahgunakan untuk spam group🙏🙏')
             }
             break
             case 'react': {
@@ -1407,7 +1387,7 @@ break
            await hisoka.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
          }
          break
-case 'stext': case 'stickertext': case 'stikertext': case 'smeme': {
+case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
 	        let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
 	        if (!/image/.test(mime)) throw respond
             if (!text) throw respond
@@ -1417,8 +1397,8 @@ case 'stext': case 'stickertext': case 'stikertext': case 'smeme': {
 	        let dwnld = await quoted.download()
 	        let { floNime } = require('./lib/uploader')
 	        let fatGans = await floNime(dwnld)
-	        let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
-	        let FaTiH = await hisoka.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.author })
+	        let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas ? atas : '')}/${encodeURIComponent(bawah ? bawah : '')}.png?background=${anu.url}`
+	        let FaTiH = await hisoka.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
 	        await fs.unlinkSync(FaTiH)
             }
 	       break     
